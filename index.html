@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div id="textBox">
+        <p id="text"></p>
+    </div>
+    <div class="container-keys" >
+        <div class="container-fuid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="container-sp">
+                        <div class="lines">
+                            <button onclick="tab()" id="tab" class="sp btn btn-dark">Tab</button>
+                        </div>
+                        <div class="lines">
+                            <button onclick="capstoggle()" id="cap" class="sp btn btn-dark">Caps Lock</button>
+                        </div>
+                        <div class="lines">
+                            <button onclick="shift()" id="shift" class="sp btn btn-dark">Shift</button>
+                        </div>
+                        <div class="lines">
+                            <button onclick="typeOut('.')" class="letter btn btn-dark">.</button>
+                            <button onclick="typeOut(',')" class="letter btn btn-dark">,</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="container-alphabets">
+                        <div class="alphabet-line">
+                            <button onclick="typeOut('q')" class="letter btn btn-dark">Q</button>
+                            <button onclick="typeOut('w')" class="letter btn btn-dark">W</button>
+                            <button onclick="typeOut('e')" class="letter btn btn-dark">E</button>
+                            <button onclick="typeOut('r')" class="letter btn btn-dark">R</button>
+                            <button onclick="typeOut('t')" class="letter btn btn-dark">T</button>
+                            <button onclick="typeOut('y')" class="letter btn btn-dark">Y</button>
+                            <button onclick="typeOut('u')" class="letter btn btn-dark">U</button>
+                            <button onclick="typeOut('i')" class="letter btn btn-dark">I</button>
+                            <button onclick="typeOut('e')" class="letter btn btn-dark">O</button>
+                            <button onclick="typeOut('p')" class="letter btn btn-dark">P</button>
+                            <button onclick="back()" id="back" class="sp btn btn-dark float-right">Backspace</button>
+                        </div>
+                        <div class="alphabet-line">
+                            <button onclick="typeOut('a')" class="letter btn btn-dark">A</button>
+                            <button onclick="typeOut('s')" class="letter btn btn-dark">S</button>
+                            <button onclick="typeOut('d')" class="letter btn btn-dark">D</button>
+                            <button onclick="typeOut('f')" class="letter btn btn-dark">F</button>
+                            <button onclick="typeOut('g')" class="letter btn btn-dark">G</button>
+                            <button onclick="typeOut('h')" class="letter btn btn-dark">H</button>
+                            <button onclick="typeOut('j')" class="letter btn btn-dark">J</button>
+                            <button onclick="typeOut('k')" class="letter btn btn-dark">K</button>
+                            <button onclick="typeOut('l')" class="letter btn btn-dark">L</button>
+                            <button onclick="enter()" id="enter" class="sp btn btn-dark float-right">Enter</button>
+                        </div>
+                        <div class="alphabet-line">
+                            <button onclick="typeOut('z')" class="letter btn btn-dark">Z</button>
+                            <button onclick="typeOut('x')" class="letter btn btn-dark">X</button>
+                            <button onclick="typeOut('c')" class="letter btn btn-dark">C</button>
+                            <button onclick="typeOut('v')" class="letter btn btn-dark">V</button>
+                            <button onclick="typeOut('b')" class="letter btn btn-dark">B</button>
+                            <button onclick="typeOut('n')" class="letter btn btn-dark">N</button>
+                            <button onclick="typeOut('m')" class="letter btn btn-dark">M</button> 
+                        </div>
+                            <button onclick="space()" id="space" class="sp btn btn-dark btn-block">Space</button>
+                         
+                    </div>
+                        
+                </div>
+                <div class="col-sm-2">
+                    <div class="container-numbers">
+                        <div class="number-lines">
+                            <button onclick="typeOutSym('1')" class="number btn btn-dark">!</button>
+                            <button onclick="typeOutSym('2')" class="number btn btn-dark">@</button>
+                            <button onclick="typeOutSym('3')" class="number btn btn-dark">#</button>
+                        </div>
+                        <div class="number-lines">
+                            <button onclick="typeOutSym('4')" class="number btn btn-dark">$</button>
+                            <button onclick="typeOutSym('5')" class="number btn btn-dark">%</button>
+                            <button onclick="typeOutSym('6')" class="number btn btn-dark">^</button>
+                        </div>
+                        
+                        <div class="number-lines">
+                            <button onclick="typeOutSym('7')" class="number btn btn-dark">&</button>
+                            <button onclick="typeOutSym('8')" class="number btn btn-dark">*</button>
+                            <button onclick="typeOutSym('9')" class="number btn btn-dark">(</button>
+                        </div>
+                        <div class="number-lines">
+                            <button onclick="typeOutSym('0')" class="number btn btn-dark">)</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-sm-2">
+                    <div class="container-numbers">
+                        <div class="number-lines">
+                            <button onclick="typeOutNum('1')" class="number btn btn-dark">1</button>
+                            <button onclick="typeOutNum('2')" class="number btn btn-dark">2</button>
+                            <button onclick="typeOutNum('3')" class="number btn btn-dark">3</button>
+                        </div>
+                        <div class="number-lines">
+                            <button onclick="typeOutNum('4')" class="number btn btn-dark">4</button>
+                            <button onclick="typeOutNum('5')" class="number btn btn-dark">5</button>
+                            <button onclick="typeOutNum('6')" class="number btn btn-dark">6</button>
+                        </div>
+                        
+                        <div class="number-lines">
+                            <button onclick="typeOutNum('7')" class="number btn btn-dark">7</button>
+                            <button onclick="typeOutNum('8')" class="number btn btn-dark">8</button>
+                            <button onclick="typeOutNum('9')" class="number btn btn-dark">9</button>
+                        </div>
+                        <div class="number-lines">
+                            <button onclick="typeOutNum('0')" class="number btn btn-dark">0</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <script src="/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

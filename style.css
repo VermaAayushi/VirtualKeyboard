@@ -1,0 +1,28 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.container-alphabets, .alphabet-line{
+    width: max-content;
+    display: block;
+    margin: auto;
+}
+.container-numbers, .number-lines{
+    width: max-content;
+    display: block;
+    margin: auto;
+}
+.alphabet-line, .number-lines, .lines{
+    padding: 8px;
+}
+.btn{
+    margin: 2px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+#textBox{
+    border: 0.2em dashed black;
+    min-height: 200px;
+    margin: 5%;
+    background-color: antiquewhite;
+}
